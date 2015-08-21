@@ -1,0 +1,186 @@
+/* === START Page Expectations === */
+html {
+  height: 100%;
+}
+body {
+  z-index: -1;
+  overflow: hidden;
+}
+/* === END Page Expectations === */
+
+/* === START Remove bootstrap styles === */
+
+
+/* === END Remove bootstrap styles === */
+
+/* === Squishy START === */
+html {
+  min-height: 1px;
+  max-height: 100%;
+}
+
+body {
+  height: inherit;
+}
+
+.sidebar {
+  width: 18%;
+  background-color: rgba(128, 128, 128, .9);
+  position: fixed;
+  padding-top: 50px;
+  height: 100%;
+  z-index: 1;
+}
+
+.sidebar-content {
+  padding: 0 5px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.sidebar-left.active {
+  left:0;
+  /* Slide-In Animation */
+  transition: left 0.3s linear;
+}
+
+.content {
+  position: fixed;
+  overflow: hidden;
+  padding-top: 50px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  /* Slide-Out Animation */
+  transition: padding-left 0.3s linear, padding-right 0.3s linear;
+}
+
+.content > .page-content {
+  position: relative;
+  padding: 0px 5px 0px 5px;
+  min-height: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+}
+
+.content-left {
+  padding-left: 18%;
+  /* Slide-In Animation */
+  transition: padding-left 0.3s linear;
+}
+
+.content-right {
+  padding-right: 18%;
+  /* Slide-In Animation */
+  transition: padding-right 0.3s linear;
+}
+
+.sidebar-right.active {
+  right:0;
+  /* Slide-In Animation */
+  transition: right 0.3s linear;
+}
+
+.sidebar-left.inactive {
+  left: -18%;
+  /* Slide-Out Animation */
+  transition: left 0.3s linear;
+}
+
+.sidebar-right.inactive {
+  right: -18%;
+  /* Slide-Out Animation */
+  transition: right 0.3s linear;
+}
+
+.sidebar > .pulltab {
+  border: 1px solid rgba(0, 0, 0, .65);
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  background-color: #FFF;
+  opacity: .65;
+  width: 20px;
+  height: 20px;
+  padding: 0 0 0 2px;
+  color: rgba(0, 0, 0, .65);
+  z-index: 1;
+  /* Fade Animation */
+  transition: opacity 0.3s linear, color 0.3s linear 0.3s;
+}
+
+.sidebar > .pulltab:hover {
+  opacity: 1;
+  color: rgba(0, 0, 0, 1);
+  /* Fade Animation */
+  transition: opacity 0.3s linear, color 0.3s linear 0.3s;
+}
+
+.sidebar > .pulltab .tab-open {
+  display: none; 
+}
+
+.sidebar > .pulltab .tab-always {
+  display: inline-block;
+}
+
+.sidebar.active > .pulltab .tab-open {
+  display: inline-block;
+}
+
+.sidebar > .pulltab .tab-close {
+  display: inline-block;
+}
+.sidebar.active > .pulltab .tab-close {
+  display: none;
+}
+
+.sidebar > .pulltab.pulltab-left {
+  left: -19px;
+}
+
+.sidebar > .pulltab.pulltab-right {
+  right: -19px;
+}
+
+/* === Squishy END === */
+
+/* === Demo Specific Stylings START === */
+/*
+  These stylings do not effect the reuse of 
+  this code in any way. They provide only the 
+  presentation of this demo
+*/
+
+.sticky {
+  right: 0;
+  left:0;
+  color: #FFF;
+  background-color: #101010;/*
+  position: absolute;*/
+  bottom: 0;
+  padding: 5px 20px;
+  height: 60px;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-top: 10px;
+}
+
+.additionalFooter {
+  background-color: #CCC;
+  margin-left: -5px;
+  margin-right: -5px;
+  padding: 5px;
+}
+/* because bootstrap adds a bottom margin, i am styling this element condition to have cleaner margins for my purposes */
+.additionalFooter .progress {
+  margin: 5px 0;
+}
+
+/* === Demo Specific Stylings END === */
