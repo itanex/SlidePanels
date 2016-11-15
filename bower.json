@@ -1,0 +1,27 @@
+{
+  "name": "ng-slide-panel",
+  "homepage": "https://github.com/itanex/ng-slide-panel",
+  "authors": [
+    "Bryan Wood <itanex@gmail.com>"
+  ],
+  "description": "ng-slide-panel",
+  "main": "index.html",
+  "keywords": [
+    "file",
+    "input",
+    "upload"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
